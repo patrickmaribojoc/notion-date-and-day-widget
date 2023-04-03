@@ -1,0 +1,21 @@
+<html>
+    <body>
+    <h2 id="date"> </h2>
+    <script type="text/javascript">
+        const daysOfTheWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+        let date = document.getElementById("date");
+        // creating the date object and getting the date and time
+        let newDate = new Date();
+        let month = newDate.getMonth() + 1;
+        let day = newDate.getDate();
+        date.innerHTML = " " + month + "/" + day + ' - ' + daysOfTheWeek[newDate.getDay()];
+    </script>
+    </body>
+    <style>
+        body{
+            background-color: rgb(25, 25, 25);;
+            font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+            color: rgb(255, 255, 255);
+        }
+    </style>
+</html>
