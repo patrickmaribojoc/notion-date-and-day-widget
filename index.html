@@ -1,6 +1,7 @@
 <html>
     <body>
     <div id="date"></div>
+    <div id="day"></div>
     </body>
     <style>
         body{
@@ -14,11 +15,11 @@
     </style>
     <script type="text/javascript">
         const daysOfTheWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
-        let date = document.getElementById("date");
-        // creating the date object and getting the date and time
+        const monthOfTheYear = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+
         let newDate = new Date();
-        let month = newDate.getMonth() + 1;
-        let day = newDate.getDate();
-        date.innerHTML = " " + month + "/" + day + ' - ' + daysOfTheWeek[newDate.getDay()];
+
+        document.getElementById("date").innerHTML = monthOfTheYear[newDate.getMonth()] + ' ' + newDate.getDate();
+        document.getElementById("day").innerHTML = daysOfTheWeek[newDate.getDay()];
     </script>
 </html>
